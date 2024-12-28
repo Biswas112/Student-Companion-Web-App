@@ -1,0 +1,108 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="container text-center">
+  <h3>Welcome {{ request.user.username }}</h3>
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="{% url 'notes' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/notes.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title">Notes</h5>
+            <p>Create Notes to refer to them later. They are stored permanently until deleted.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'homework' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/homework.jpg' %}" alt="Homework image">
+          <div class="card-body">
+            <h5 class="card-title">Homework</h5>
+            <p>Add homework and assign them deadlines. They will be displayed prioritized by deadlines.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'youtube' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/youtube.jpg' %}" alt="YouTube image">
+          <div class="card-body">
+            <h5 class="card-title">YouTube</h5>
+            <p>Search YouTube and select your desired video to play it on YouTube.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'to_do' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/todo.jpg' %}" alt="To-Do image">
+          <div class="card-body">
+            <h5 class="card-title">To Do</h5>
+            <p>Add your to-do lists for your day and remove them as you finish.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="{% url 'books' %}">
+        <div class="card mt-20">
+          <img class="card-img-top" src="{% static 'images/books.jpg' %}" alt="Books image">
+          <div class="card-body">
+            <h5 class="card-title">Books</h5>
+            <p>Browse books from a list of neatly organized book menus.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'dic' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/dictionary.jpg' %}" alt="Dictionary image">
+          <div class="card-body">
+            <h5 class="card-title">Dictionary</h5>
+            <p>Enter a word and get the meaning almost instantaneously.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'wiki' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/wiki.jpg' %}" alt="Wikipedia image">
+          <div class="card-body">
+            <h5 class="card-title">WikiPedia</h5>
+            <p>Search Wikipedia for quick answers to your homework and assignments.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    
+  </div>
+
+</section>
+
+<div class="floating-chat-icon">
+  <a href="{% url 'chat' %}">
+    <img src="{% static 'images/chat.jpg' %}" alt="Chat with Teachers" title="Chat with Teachers">
+  </a>
+</div>
+
+
+
+{% endblock content %}

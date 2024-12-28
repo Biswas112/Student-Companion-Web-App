@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: #ffffff;
+        }
+
+        .error-container {
+            text-align: center;
+            background-color: #1e293b;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 400px;
+            border: 2px solid #475569;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .error-container h2 {
+            font-size: 28px;
+            color: #f8fafc;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .error-container small {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .error-container small a {
+            display: inline-block;
+            color: #ffffff;
+            background: linear-gradient(135deg, #475569, #1e293b);
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid #64748b;
+        }
+
+        .error-container small a:hover {
+            background: linear-gradient(135deg, #1e293b, #475569);
+            box-shadow: 0px 6px 15px rgba(71, 85, 105, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h2>You are Logged Out</h2>
+        <small>
+            <a href="#">Log In Again</a>
+        </small>
+    </div>
+</body>
+</html>
